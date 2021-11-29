@@ -48,7 +48,6 @@ public class StatsService {
     public int countMonthMinSales(long[] sales) {  //количество месяцев, в которых продажи ниже среднего
         int countMinMonth = 0;
         int average = findAverage(sales);
-        int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : sales) {
             // sale - продажи в рассматриваемом месяце
             if (sale < average) {
@@ -62,7 +61,6 @@ public class StatsService {
     public int countMonthMaxSales(long[] sales) {  //количество месяцев, в которых продажи выше среднего
         int countMaxMonth = 0;
         int average = findAverage(sales);
-        int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : sales) {
             // sale - продажи в рассматриваемом месяце
             if (sale > average) {
